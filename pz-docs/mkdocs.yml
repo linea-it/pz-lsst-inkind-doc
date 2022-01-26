@@ -1,5 +1,4 @@
 site_name: BRA-LIN S4
-site_url: https://www.linea.gov.br/docs/pz-lsst
 nav:
     - Home: index.md
 theme: readthedocs
