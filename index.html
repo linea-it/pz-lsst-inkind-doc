@@ -94,14 +94,36 @@
             <div class="section">
               
                 <h1 id="bra-lin-s4">BRA-LIN S4</h1>
-<p>In-kind contribution program BRA-LIN S4 - Photometric Redshifts (LIneA-&gt;LSST). </p>
-<p><a href="https://docs.google.com/document/d/1JWUG2vxxPD1DwrbQsZwI1q_2lk2TIGnHGHNbaq2zAbk/edit?usp=sharing">BRA-LIN in-kind contribution proposal</a></p>
+<p>In-kind contribution program BRA-LIN S4 - Photometric Redshifts.</p>
+<p>This page describes the in-kind contributions offered by the Laboratório Interinstitucional de e-Astronomia (<a href="http://www.linea.gov.br">LIneA</a>) to <a href="https://www.lsst.org/">Vera C. Rubin Observatory</a>'s PZ Coordination Group, approved as part of the in-kind contribution program BRA-LIN. The BRA-LIN in-kind contribution proposal document is available on <a href="https://docs.google.com/document/d/1JWUG2vxxPD1DwrbQsZwI1q_2lk2TIGnHGHNbaq2zAbk/edit?usp=sharing">this link</a></p>
+<p>The Section 4 of the proposal refers to the contributions related to Photometric Redshifts. It is organized in four subsections, summarized below:  </p>
 <h2 id="bra-lin-s41-pz-tsm">BRA-LIN S4.1 - PZ TSM</h2>
-<p>--- under construction ---</p>
+<p>The Python package pz_tsm (Training Set Maker for Photo-zs) is inspired by its namesake Training Set Maker pipeline, available on the DES Science Portal (<a href="https://www.sciencedirect.com/science/article/abs/pii/S2213133718300891?via%3Dihub">Gschwend et al., 2018</a>), but will rely on a completely different infrastructure. The new Training Set Maker will take advantage of the administrative functions of the PZ Ser:qver to retrieve data and metadata, and the Brazilian IDAC infrastructure, to perform combinations of different datasets and crossmatch with the LSST objects catalog. </p>
+<p>The package is designed to handle lightweight catalogs of spectroscopic redshifts (spec-z) to be used for the purpose of training and validation of PZ algorithms. It will offer useful Python functions to manipulate and visualize these catalogs that are expected to contain the order of hundreds of thousand objects . It is by no means to be considered as a tool to manipulate big data. </p>
+<p>The figure below shows the dataflow through a series of steps. In the very beginning, it will use available tools such as Astroquery (<a href="https://ui.adsabs.harvard.edu/abs/2019AJ....157...98G/abstract">Ginsburg, Sipőcz, Brasseur et al 2019</a>) to retrieve public spec-z catalogs available online. It would also allow the communication with the PZ Server to provide other spec-z catalogs which are not available online, such as proprietary data uploaded by users or simulated data built inside LSST for specific purposes. </p>
+<p><img alt="Sequence of steps for Training Set Maker" src="tsm_dataflow.png" /></p>
+<p>The package will provide a function to connect to PZ Server and perform the cross-matching of the objects with the objects in LSST objects catalog and return the photometric data of interest for the construction of training and validation sets (e.g. magnitudes and respective errors).</p>
+<p>The further manipulation of the matched data to define the training and validation subsamples might be strongly dependent on the specific science case. Therefore it is expected to receive contributions from the community for the implementation of science-driven methods of subsample definition (e.g. with weights or data  augmentation). The core package will provide a simple random split of the matched sample into training and validation subsamples as default. </p>
+<p>Finally, the resulting training and validation sets created will be formatted according to the LSST requirements (to be defined by DM) and contain all the provenance information necessary to be ready to be uploaded on the PZ Server.</p>
 <h2 id="bra-lin-s42-pz-server">BRA-LIN S4.2 - PZ Server</h2>
-<p>--- under construction ---</p>
+<p>Inspired by features of the DES Science Portal (<a href="https://www.sciencedirect.com/science/article/abs/pii/S2213133718300891?via%3Dihub">Gschwend et al., 2018</a>; <a href="https://www.sciencedirect.com/science/article/abs/pii/S2213133717300975">Fausti Neto et al., 2018</a>), the PZ Server is being planned to be an online service, complementary to the Rubin Science Platform (RSP), to host PZ-related lightweight data products and to offer data management tools that allow sharing data products among RSP users, attach and share relevant metadata, and help on provenance tracking. </p>
+<p>The PZ Server will be hosted in the Brazilian Independent Data Access Center (IDAC), being accessible via an independent URL (www.linea.gov.br/pz-server), open to all RSP users (LSST data rights holders), without geographic constraints. It is being planned to be as broad and generic as possible to be useful to all LSST Science Collaborations that work with PZ data products. As required by LSST in-kind program, the source code will be publicly available on GitHub (https://github.com/linea-it/pz-server).</p>
+<p>The PZ Coordination Group will be provided with "admin" user credentials with special permissions and will also be able to request uploads of official data products on-demand to the LIneA team.
+The PZ Server is being designed with a special focus on helping RSP users participating in the PZ Validation Cooperative, a DM team's initiative that will take place during LSST commissioning phase (see technical note dmtn-049 for details), but it is planned to continue serving the LSST Community during subsequent years. During the PZ Validation Cooperative, the PZ Coordination Group will be able to use the PZ Server to host and distribute standardized training and validation sets to be used in algorithm performance comparison experiments, as well as to collect the results obtained by different users. </p>
+<p>Beyond the PZ Validation Cooperative, the RSP users will be able to use the PZ Server to easily keep track and share lightweight files containing varied test results. All data products uploaded to the PZ Server will automatically be visible and available, without any scientific validation, to all RSP users, and only for this particular group, therefore it is not the appropriate tool to release data products to the general public.   </p>
 <h2 id="bra-lin-s43-pz-validation-cooperative">BRA-LIN S4.3 - PZ Validation Cooperative</h2>
-<p>--- under construction ---</p>
+<p>The third contribution refers to offering help on the PZ Validation Cooperative by LIneA staff with expertise in the area of photo-zs. To know more about the PZ Validation Cooperative organized by LSST DM, please access the document<a href="https://dmtn-049.lsst.io/">DMTN-049 - A Roadmap to Photometric Redshifts for the LSST Object Catalog</a>. </p>
+<p>The contribution is offered in terms of FTEs to contribute with tasks defined by the recipient group at the epoch of the Cooperartive (commissioning phase). Some expected activities include:</p>
+<ul>
+<li>Prepare and present tutorials on how to contribute using the PZ Server. </li>
+<li>Give support to the community on the usage of PZ Server. </li>
+<li>Help to implement a standard validation pipeline.</li>
+<li>Help to create standard training anf validation sets.</li>
+<li>Help the to collect and organize results from all participants.</li>
+<li>Help to homogenize data format of PZ Validation results from all contributors.</li>
+<li>Help to run the standard validation pipeline for all PZ Validation results.</li>
+<li>Help to write reports with the summary of results, to provide elements for a PZ validation paper. </li>
+</ul>
 <h2 id="bra-lin-s44-pz-tables-as-federated-datasets">BRA-LIN S4.4 - PZ Tables as Federated Datasets</h2>
 <p>--- under construction ---</p>
               
@@ -149,5 +171,5 @@
 
 <!--
 MkDocs version : 1.2.3
-Build Date UTC : 2022-01-26 19:55:29.330289+00:00
+Build Date UTC : 2022-03-31 19:04:00.157262+00:00
 -->
