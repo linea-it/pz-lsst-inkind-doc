@@ -40,7 +40,7 @@ Beyond the PZ Validation Cooperative, the RSP users will be able to use the PZ S
 
 ## BRA-LIN S4.3 - PZ Validation Cooperative
 
-The third contribution refers to offering help on the PZ Validation Cooperative by LIneA staff with expertise in the area of photo-zs. To know more about the PZ Validation Cooperative organized by LSST DM, please access the document[DMTN-049 - A Roadmap to Photometric Redshifts for the LSST Object Catalog](https://dmtn-049.lsst.io/). 
+The third contribution refers to offering help on the PZ Validation Cooperative by LIneA staff with expertise in the area of photo-zs. To know more about the PZ Validation Cooperative organized by LSST DM, please access the document [DMTN-049 - A Roadmap to Photometric Redshifts for the LSST Object Catalog](https://dmtn-049.lsst.io/). 
 
 The contribution is offered in terms of FTEs to contribute with tasks defined by the recipient group at the epoch of the Cooperartive (commissioning phase). Some expected activities include:
 
@@ -55,4 +55,7 @@ The contribution is offered in terms of FTEs to contribute with tasks defined by
 
 
 ## BRA-LIN S4.4 - PZ Tables as Federated Datasets 
---- under construction ---
+
+This contribution consists in running a PZ algorithm (do be defined by the recipient) for the whole LSST objects catalog before each annual data release and provide the PZ table to the RSP users as a federated dataset, hosted in the Brazilian IDAC. 
+
+To acomplish with this contribution, a new pipeline will be developed to run PZs at LSST scale using parallel computing. 
