@@ -7,4 +7,4 @@ Central repository for documents related to the BRA-LIN S4 in-kind contribution 
 Links to technical documentation and user guides will be added to that page during the project as soon as they become available, so it is to be considered a live document. 
  
 
-Program Manager: Julia Gschwend ([julia@linea.gov.br](mailto:julia@linea.gov.br))  
+Program Manager: Julia Gschwend ([julia@linea.gov.br](mailto:julia@linea.org.br))  
