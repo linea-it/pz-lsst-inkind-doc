@@ -1,6 +1,6 @@
 # BRA-LIN-S4     
 
-### In-kind contribution program BRA-LIN-S4 - Photometric Redshifts.
+In-kind contribution program BRA-LIN-S4 - Photometric Redshifts.
 
 #### Introduction
 
