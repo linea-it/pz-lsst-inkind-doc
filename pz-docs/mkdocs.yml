@@ -1,4 +1,8 @@
 site_name: BRA-LIN-S4
 nav:
     - Home: index.md
+    - BRA-LIN-S4.1: s4_1.md
+    - BRA-LIN-S4.2: s4_2.md
+    - BRA-LIN-S4.3: s4_3.md
+    - BRA-LIN-S4.4: s4_4.md
 theme: readthedocs
