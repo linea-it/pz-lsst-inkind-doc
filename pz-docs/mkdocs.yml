@@ -8,3 +8,9 @@ nav:
     - BRA-LIN-S4.4: s4_4.md
 
 theme: readthedocs
+
+# Extensions
+markdown_extensions:
+  - meta
+  - footnotes
+  - admonition
