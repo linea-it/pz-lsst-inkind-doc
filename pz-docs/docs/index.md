@@ -13,17 +13,18 @@ The Section 4 of the BRA-LIN proposal refers to the contributions related to Pho
 * S4.1 - [PZ Training Set Maker](s4_1.md)
 * S4.2 - [PZ Server](s4_2.md) 
 * S4.3 - [PZ Validation Cooperative](s4_3.md)
-* S4.4 - [PZ Server](s4_4.md) 
+* S4.4 - [PZ Tables as Federated Datasets](s4_4.md) 
 
 
 
 #### LIneA Key Personnel
 
-- **Proposal Lead:** Luiz Nicolaci da Costa
-- **Program Manager:** Julia Gschwend
-- **Contribution Lead of BRA-LIN-S4:** Julia Gschwend ([contact](mailto:julia@linea.org.br))
+- **Proposal lead:** Luiz Nicolaci da Costa
+- **Program manager:** Julia Gschwend
+- **Contribution lead of BRA-LIN-S4:** Julia Gschwend ([contact](mailto:julia@linea.org.br))
 - **Software developers:** Cristiano Singulani, Glauber Costa Vila-Verde
-- **System Analyst:** Carlos Adean
+- **System analyst:** Carlos Adean
+- **Undergrad student:** Heloisa Mengisztki
 
 #### Rubin Observatory Key Personnel
 
