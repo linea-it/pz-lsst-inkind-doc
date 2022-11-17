@@ -53,7 +53,7 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#pz-server-website">PZ Server Website</a>
+    <li class="toctree-l2"><a class="reference internal" href="#photo-z-server-website">Photo-z Server Website</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#pz-server-api">PZ Server API</a>
     </li>
@@ -91,14 +91,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h2 id="s42-pz-server">S4.2 - PZ Server</h2>
+                <h2 id="s42-photo-z-server">S4.2 - Photo-z Server</h2>
 <h3 id="introduction">Introduction</h3>
-<p>Inspired by features of the DES Science Portal (<a href="https://www.sciencedirect.com/science/article/abs/pii/S2213133718300891?via%3Dihub">Gschwend et al., 2018</a>; <a href="https://www.sciencedirect.com/science/article/abs/pii/S2213133717300975">Fausti Neto et al., 2018</a>), the PZ Server is being developed to be an online service, complementary to the Rubin Science Platform (RSP), to host PZ-related lightweight data products and to offer data management tools that allow sharing data products among RSP users, attach and share relevant metadata, and help on provenance tracking. </p>
+<p>Inspired by features of the DES Science Portal (<a href="https://www.sciencedirect.com/science/article/abs/pii/S2213133718300891?via%3Dihub">Gschwend et al., 2018</a>; <a href="https://www.sciencedirect.com/science/article/abs/pii/S2213133717300975">Fausti Neto et al., 2018</a>), the Photo-z (PZ) Server is being developed to be an online service, complementary to the Rubin Science Platform (RSP), to host PZ-related lightweight data products and to offer data management tools that allow sharing data products among RSP users, attach and share relevant metadata, and help on provenance tracking. </p>
 <p>The PZ Server is hosted at the Brazilian Independent Data Access Center (IDAC) and is open to all RSP users (LSST data rights holders), without geographic constraints. It is designed to be as broad and generic as possible to be helpful to all LSST Science Collaborations working with PZ data products. As required by LSST in-kind program, the source code will be publicly available on <a href="https://github.com/linea-it/pz-server">GitHub</a>.</p>
 <p>The PZ Server was designed to focus on helping RSP users participate in the PZ Validation Cooperative, a DM team's initiative that will take place during LSST commissioning phase (see technical note dmtn-049 for details). The PZ Coordination Group will receive "admin" user credentials with special permissions to add data products tagged as "official data products". During the PZ Validation Cooperative, the PZ Coordination Group can use the PZ Server to host and distribute standardized training and validation sets to be used in algorithm performance comparison experiments and collect the results of different users. </p>
 <p>Nonetheless, the PZ Server will continue serving the LSST Community in subsequent years. Beyond the PZ Validation Cooperative, the RSP users can use the PZ Server to easily keep track and share lightweight files containing varied test results.</p>
-<h3 id="pz-server-website">PZ Server Website</h3>
-<p>The PZ Server is accessible via the website (<a href="https://pz-server.linea.org.br">pz-server.linea.org.br</a>), where the users can upload user-generated data products and browse to find and download data products from a list. The official data products are listed on a separate page (the card on the left side of the landing page). </p>
+<h3 id="photo-z-server-website">Photo-z Server Website</h3>
+<p>The PZ Server will be accessible via the website (<a href="https://pz-server.linea.org.br">pz-server.linea.org.br</a>), where the users can upload user-generated data products and browse to find and download data products from a list. The official data products are listed on a separate page (the card on the left side of the landing page). </p>
+<p><img alt="PZ Server Website" src="../pz_server_website.png" /></p>
+<p>During the development phase, a test environment is available at <a href="https://pz-server.linea.org.br">pz-server-dev.linea.org.br</a>. Feedback from future PZ Server users is more than welcome. Please <a href="mailto:julia@linea.org.br">contact us</a> if you are interested in joining the group of testers.    </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>All data products uploaded to the PZ Server will automatically be visible and available, without any scientific validation, to all RSP users and only for this particular group. Therefore it is not the appropriate tool to release data products to the general public.   </p>
