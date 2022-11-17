@@ -1,6 +1,6 @@
 # pz-lsst-inkind-doc 
 
-Central repository for documentation related to the BRA-LIN S4 in-kind contribution program. 
+Central repository for documentation related to Section S4 of the BRA-LIN in-kind contribution program. 
 
 ### An overview of the in-kind contributions is available [here](https://linea-it.github.io/pz-lsst-inkind-doc/).
 
