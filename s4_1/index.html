@@ -47,6 +47,12 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="./">BRA-LIN-S4.1</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-flow">Data flow</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#forecasted-use-cases">Forecasted use cases</a>
+    </li>
     </ul>
                 </li>
               </ul>
@@ -86,13 +92,34 @@
             <div class="section" itemprop="articleBody">
               
                 <h2 id="s41-pz-training-set-maker">S4.1 - PZ Training Set Maker</h2>
-<p>The Python package pz_tsm (Training Set Maker for Photo-zs) is inspired by its namesake Training Set Maker pipeline, available on the DES Science Portal (<a href="https://www.sciencedirect.com/science/article/abs/pii/S2213133718300891?via%3Dihub">Gschwend et al., 2018</a>), but will rely on completely different infrastructure. The new Training Set Maker will take advantage of the administrative functions of the PZ Server to retrieve data and metadata, and the Brazilian IDAC infrastructure, to perform combinations of different datasets and crossmatch with the LSST objects catalog. </p>
-<p>The package is designed to handle lightweight catalogs of spectroscopic redshifts (spec-z) to be used for the purpose of training and validation of PZ algorithms. It will offer useful Python functions to manipulate and visualize these catalogs that are expected to contain the order of hundreds of thousands of objects. It is by no means to be considered a tool to manipulate big data. </p>
-<p>The figure below shows the data flow through a series of steps. In the very beginning, it will use available tools such as <a href="https://astroquery.readthedocs.io/en/latest/">Astroquery</a> (<a href="https://ui.adsabs.harvard.edu/abs/2019AJ....157...98G/abstract">Ginsburg, Sipőcz, Brasseur, et al 2019</a>) to retrieve public spec-z catalogs available online. Alternatively, it would take advantage of the PZ Server API aspect to access user-generated catalogs hosted by the server. </p>
+<h4 id="introduction">Introduction</h4>
+<p>The Python package <a href="https://github.com/linea-it/pz-tsm"><code>pz-tsm</code></a> (Training Set Maker for Photo-zs) is inspired by its namesake Training Set Maker pipeline, available on the DES Science Portal (<a href="https://www.sciencedirect.com/science/article/abs/pii/S2213133718300891?via%3Dihub">Gschwend et al., 2018</a>), but will rely on completely different infrastructure. The package is designed to handle lightweight catalogs of spectroscopic redshifts (spec-z) to be used for the purpose of training and validation of PZ algorithms. </p>
+<p><a href="https://github.com/linea-it/pz-tsm"><code>pz-tsm</code></a> will offer useful Python functions to manipulate and visualize these catalogs that are expected to contain the order of hundreds of thousands of objects. It is by no means to be considered an efficient tool to manipulate big data at the user's work environment. Nonetheless, <a href="https://github.com/linea-it/pz-tsm"><code>pz-tsm</code></a> will take advantage of the administrative functions of the PZ Server to retrieve data and metadata, and the Brazilian IDAC's infrastructure to deal with large datasets. It will provide access to an asynchronous online service that uses IDAC's computing resources to perform combinations of different datasets and cross-matching with the LSST objects catalog. </p>
+<h4 id="data-flow">Data flow</h4>
+<p>The figure below shows the data flow through a series of steps.</p>
 <p><img alt="Sequence of steps for Training Set Maker" src="../tsm_dataflow.png" /></p>
-<p>The package will provide a function to submit cross-matching jobs, using the PZ Server infrastructure, to combine a given spec-z catalog with the LSST objects catalog and return the photometric data of interest for the construction of training and validation sets (e.g. magnitudes and respective errors). </p>
-<p>The further manipulation of the matched data to define the training and validation subsamples might be strongly dependent on the specific science case, therefore out of the scope of this contribution. It is expected that the pz_tsm package will receive contributions from the community for the implementation of science-driven methods of subsample definition (e.g. with weights or data augmentation). The core package will provide a simple random split of the matched sample into training and validation subsamples as default. </p>
-<p>Finally, the resulting training and validation sets created will be formatted according to the LSST requirements described in the <a href="https://dmtn-049.lsst.io/">DMTN-049 - A Roadmap to Photometric Redshifts for the LSST Object Catalog</a> (to be defined by LSST Data Management (DM) System Science Team) and contain all the provenance information necessary to be considered reproducible and ready to be uploaded on the PZ Server.</p>
+<hr />
+<h4 id="forecasted-use-cases">Forecasted use cases</h4>
+<ol>
+<li>
+<p>The user retrieves spec-z catalogs from online services using the <a href="https://github.com/linea-it/pz-tsm"><code>pz-tsm</code></a> as a search interface. <a href="https://github.com/linea-it/pz-tsm"><code>pz-tsm</code></a> will provide a list of previous spec-z surveys of interest, for which there will be metadata and quality flags conversion already available (previously fed by the person from LIneA staff in charge of data curation). The implementation will use open-source tools such as those available in <a href="https://astroquery.readthedocs.io/en/latest/">Astroquery</a> (<a href="https://ui.adsabs.harvard.edu/abs/2019AJ....157...98G/abstract">Ginsburg, Sipőcz, Brasseur, et al 2019</a>) to retrieve public spec-z catalogs. </p>
+</li>
+<li>
+<p>The user combines different spec-z catalogs into a single table. <a href="https://github.com/linea-it/pz-tsm"><code>pz-tsm</code></a> will provide a mechanism to perform spatial cross-matching among multiple tables to resolve multiple spec-z measurements for the same galaxies (flexible criteria) and to standardize quality flags from different surveys. </p>
+</li>
+<li>
+<p>The user retrieves spec-z catalogs from the PZ Server. <a href="https://github.com/linea-it/pz-tsm"><code>pz-tsm</code></a> will take advantage of the PZ Server's API <a href="/pz-docs/docs/s4_2.md"><code>pz-server-lib</code></a> (see API's documentation <a href="https://linea-it.github.io/pz-server-lib/html/index.html">here</a>) to access user-generated catalogs hosted by the server. The PZ Server will host a standardized compilation of spec-z with public data available up to date, vetted by LSST DM staff, to be updated periodically by LIneA staff, easy to find (e.g. flagged as "latest"), and containing detailed documentation for citation of the original sources.  </p>
+</li>
+<li>
+<p>The user combines a spec-z table (local or from PZ Server) with photometric data from the LSST Objects Catalog to build a training set for photo-z codes. <a href="https://github.com/linea-it/pz-tsm"><code>pz-tsm</code></a> will provide a mechanism to submit jobs to perform spatial cross-matching between a spec-z table and the copy of the LSST data hosted in the Brazilian IDAC, using the IDAC's computing resources. The results of the matching will be sent back to the user's local work environment (e.g. the RSP's notebook aspect). </p>
+</li>
+<li>
+<p>The user split the matched spec-photo catalog into two or more subsamples (for training and validation/test purposes). <a href="https://github.com/linea-it/pz-tsm"><code>pz-tsm</code></a> will provide a simple method to split the data randomly into a finite number of parts, with proportions defined by the user. Additional methods that follow specific science-driven criteria to define subsamples or that apply some transformation of the data (e.g. weighting or data augmentation) can be added as contributions from the community. </p>
+</li>
+<li>
+<p>The LSST PZ Commissioning Team uses the <a href="https://github.com/linea-it/pz-tsm"><code>pz-tsm</code></a> to create standardized training and validation sets to be used in the <em>Photo-z Validation Cooperative</em> and distribute them to the community through the Photo-z Server. The resulting catalogs will be formatted according to the LSST requirements described in the <a href="https://dmtn-049.lsst.io/">DMTN-049 - A Roadmap to Photometric Redshifts for the LSST Object Catalog</a> (to be defined by LSST Data Management (DM) System Science Team) and contain all the provenance information necessary to be considered reproducible and ready to be uploaded on the PZ Server. </p>
+</li>
+</ol>
               
             </div>
           </div><footer>
