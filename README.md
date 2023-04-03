@@ -18,13 +18,24 @@ To install mkdocs:
 ``` 
 pip install mkdocs
 ``` 
-
-After editing the text, to see the changes locally, go to the directory with the `mkdocs.yml` file and run: 
+Open a new git branch and make your changes there. After editing the text, to see the changes locally, go to the directory with the `mkdocs.yml` file and run: 
 
 ```
 mksocs serve
 ```
 
 The prompt will return a local address (e.g.: http://127.0.0.1:8000/). Copy and paste this address in your browser to navigate through the pages. 
+
+After finishing with the text editing, open a pull request on github and, after aproved, merge the new branch to the main branch. 
+
+
+To update the contents on GitHub pages, run:  
+
+
+```
+git checkout main 
+git pull 
+mkdocs gh-deploy 
+``` 
 
 
