@@ -4,9 +4,9 @@ In-kind contribution program BRA-LIN-S4 - Photometric Redshifts.
 
 #### Introduction
 
-This page describes the in-kind contributions offered by the Laboratório Interinstitucional de e-Astronomia ([LIneA](http://www.linea.org.br)) to [Vera C. Rubin Observatory](https://www.lsst.org/)'s PZ Coordination Group, approved as part of the in-kind contribution program BRA-LIN. The BRA-LIN in-kind contribution proposal document is available on [this link](https://docs.google.com/document/d/1JWUG2vxxPD1DwrbQsZwI1q_2lk2TIGnHGHNbaq2zAbk/edit?usp=sharing). 
+This page describes the in-kind contributions offered by the Laboratório Interinstitucional de e-Astronomia ([LIneA](http://www.linea.org.br)) to [Vera C. Rubin Observatory](https://www.lsst.org/), approved as part of the in-kind contribution program BRA-LIN. The BRA-LIN in-kind contribution proposal document is available on [this link](https://docs.google.com/document/d/1JWUG2vxxPD1DwrbQsZwI1q_2lk2TIGnHGHNbaq2zAbk/edit?usp=sharing). 
 
-This is a live document started with the description of planned work, to be constantly updated to offer a high-level description of the software produced, as long as the program evolves. Technical documentation of each piece of software should be delivered together with the code in the respective repositories. 
+This is a live document started with the description of planned work. It is regularly updated to offer a high-level description of the software produced, as long as the program evolves. Technical documentation of each piece of software should be delivered together with the code in the respective repositories. 
 
 The Section 4 of the BRA-LIN proposal refers to the contributions related to Photometric Redshifts. It is organized in four subsections (click for more details):  
 
@@ -21,12 +21,13 @@ The Section 4 of the BRA-LIN proposal refers to the contributions related to Pho
 
 - **Proposal lead:** Luiz Nicolaci da Costa
 - **Program manager:** Julia Gschwend
-- **Contribution lead of BRA-LIN-S4:** Julia Gschwend ([contact](mailto:julia@linea.org.br))
-- **Software developers:** Cristiano Singulani, Glauber Costa Vila-Verde
+- **Contribution lead of BRA-LIN-S4:** Julia Gschwend (contact: **julia at linea dot org dot br**)
+- **Software developers:** Cristiano Singulani, Glauber Costa Vila-Verde, Henrique Dante 
 - **System analyst:** Carlos Adean
 - **Undergrad student:** Heloisa Mengisztki
 
 #### Rubin Observatory Key Personnel
 
-- Recipient Group: Rubin Construction Data Management Subsystem - Rubin Photo-z Coordination Group. Contact point: Melissa Graham  
+- Primary recipient group: Rubin Algorithms & Pipelines Team. Contact point: Agnès Ferté 
+- Secondary recipient group: Rubin Photo-z Coordination Group. Contact point: Melissa Graham  
 - In-kind Program Coordinators (IPCs) for ​​Software Development and Science Collaboration interactions in the Rubin Operations Director’s Office: Aprajita Verma, Greg Madejski
