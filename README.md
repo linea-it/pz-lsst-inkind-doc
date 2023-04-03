@@ -21,7 +21,7 @@ pip install mkdocs
 Open a new git branch and make your changes there. After editing the text, to see the changes locally, go to the directory with the `mkdocs.yml` file and run: 
 
 ```
-mksocs serve
+mkdocs serve
 ```
 
 The prompt will return a local address (e.g.: http://127.0.0.1:8000/). Copy and paste this address in your browser to navigate through the pages. 
