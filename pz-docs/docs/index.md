@@ -6,7 +6,9 @@ In-kind contribution program BRA-LIN-S4 - Photometric Redshifts.
 
 This page describes the in-kind contributions offered by the Laboratório Interinstitucional de e-Astronomia ([LIneA](http://www.linea.org.br)) to [Vera C. Rubin Observatory](https://www.lsst.org/), approved as part of the in-kind contribution program BRA-LIN. The BRA-LIN in-kind contribution proposal document is available on [this link](https://docs.google.com/document/d/1JWUG2vxxPD1DwrbQsZwI1q_2lk2TIGnHGHNbaq2zAbk/edit?usp=sharing). 
 
-This is a live document that started with the description of planned work. It is regularly updated to offer a high-level description of the software produced, as long as the program evolves. Technical documentation of each piece of software should be delivered together with the code in the respective repositories. 
+This is a live document that started with the description of planned work. It is regularly updated to offer a high-level description of the software produced, as long as the program evolves. Technical documentation of each piece of software should be delivered together with the code in the respective repositories. For comments or suggestions, please open an issue [here](https://github.com/linea-it/pz-lsst-inkind-doc/issues). 
+
+*** 
 
 The Section 4 of the BRA-LIN proposal refers to the contributions related to Photometric Redshifts. It is organized in four subsections (click for more details):  
 
