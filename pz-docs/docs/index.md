@@ -4,7 +4,7 @@ In-kind contribution program BRA-LIN-S4 - Photometric Redshifts.
 
 #### Introduction
 
-This page describes the in-kind contributions offered by the Laboratório Interinstitucional de e-Astronomia ([LIneA](http://www.linea.org.br)) to [Vera C. Rubin Observatory](https://www.lsst.org/), approved as part of the in-kind contribution program BRA-LIN. This is a live document that started with the description of planned work. It is regularly updated to offer a high-level description of the software produced, as long as the program evolves. Technical documentation of each piece of software should be delivered together with the code in the respective repositories. For comments or suggestions, please open an issue [here](https://github.com/linea-it/pz-lsst-inkind-doc/issues). 
+This page describes the in-kind contributions offered by the Laboratório Interinstitucional de e-Astronomia ([LIneA](http://www.linea.org.br){:target="_blank"}) to [Vera C. Rubin Observatory](https://rubinobservatory.org/){:target="_blank"}, approved as part of the in-kind contribution program BRA-LIN. This is a live document that started with the description of planned work. It is regularly updated to offer a high-level description of the software produced, as long as the program evolves. Technical documentation of each piece of software should be delivered together with the code in the respective repositories. For comments or suggestions, please open an issue [here](https://github.com/linea-it/pz-lsst-inkind-doc/issues){:target="_blank"}. 
 
 *** 
 
@@ -22,15 +22,28 @@ The Section 4 of the BRA-LIN proposal refers to the contributions related to Pho
 
 * [BRA-LIN S4 work plan approved by Rubin staff](https://drive.google.com/file/d/1SmMggDtbVOVogOboq6X-smjv6wbXus-3/preview){:target="_blank"}
 
+* [BRA-LIN S4 annual evaluation report FY2023](https://drive.google.com/file/d/109e2cG9QnI-xaRFkzLAc6v9wdfwCkFjN/preview){:target="_blank"}
+
+* BRA-LIN S4 annual evaluation report FY2024 (soon)
 
 
-#### Timeline
+#### Project Management on GitHub
+
+* [S4.1 and S4.2 - Training Set Maker and PZ](https://github.com/orgs/linea-it/projects/2/views/1){:target="_blank"}
+
+* S4.3 - PZ Validation Cooperative (start in 2024) 
+
+* [S4.4 - PZ Compute](https://github.com/orgs/linea-it/projects/10/views/1){:target="_blank"}
 
 
 
-![BRA-LIN Timeline](BRA-LIN-S4_Timeline_v_Apr23.png)
+#### Timeline 
 
-BRA-LIN S4 Timeline revised on April 2023 based on LSST Timeline version published on March 2023 on the [Rubin Observatory's website](https://gallery.lsst.org/bp/#/folder/2358063/64810213){:target="_blank"}.
+
+
+![BRA-LIN Timeline](BRA-LIN-S4_Timeline_v_Oct23.png)
+
+BRA-LIN S4 Timeline revised on October 2023 based on LSST Timeline version published on March 2023 on the [Rubin Observatory's website](https://gallery.lsst.org/bp/#/folder/2358063/64810213){:target="_blank"}.
 
 #### LIneA Key Personnel
 
@@ -43,5 +56,6 @@ BRA-LIN S4 Timeline revised on April 2023 based on LSST Timeline version publish
 
 #### Rubin Observatory Key Personnel
 
-- Primary recipient group: Rubin Photo-z Coordination Group. Contact point: Melissa Graham  
-- In-kind Program Coordinators (IPCs) for Software Development and Science Collaboration interactions in the Rubin Operations Director’s Office: Aprajita Verma, Greg Madejski
+- Primary recipient group: Rubin Photo-z Coordination Group (Contact point: Melissa Graham) 
+- In-kind Program Coordinators (IPCs) for Software Development and Science Collaboration interactions in the Rubin Operations Director’s Office: Agnès Ferté, Aprajita Verma, Greg Madejski
+
