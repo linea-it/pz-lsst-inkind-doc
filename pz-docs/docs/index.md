@@ -4,11 +4,11 @@ In-kind contribution program BRA-LIN-S4 - Photometric Redshifts.
 
 #### Introduction
 
-This page describes the in-kind contributions offered by the Laboratório Interinstitucional de e-Astronomia ([LIneA](http://www.linea.org.br){:target="_blank"}) to [Vera C. Rubin Observatory](https://rubinobservatory.org/){:target="_blank"}, approved as part of the in-kind contribution program BRA-LIN. This is a live document that started with the description of planned work. It is regularly updated to offer a high-level description of the software produced, as long as the program evolves. Technical documentation of each piece of software should be delivered together with the code in the respective repositories. For comments or suggestions, please open an issue [here](https://github.com/linea-it/pz-lsst-inkind-doc/issues){:target="_blank"}. 
+This page describes the in-kind contributions offered by the Laboratório Interinstitucional de e-Astronomia ([LIneA](http://www.linea.org.br){:target="_blank"}) to [Vera C. Rubin Observatory](https://rubinobservatory.org/){:target="_blank"}, approved as part of the in-kind contribution program BRA-LIN. This is a live document that started with the description of planned work. It is regularly updated to offer a high-level description of the software produced as long as the program evolves. Technical documentation of each piece of software should be delivered together with the code in the respective repositories. For comments or suggestions, please open an issue [here](https://github.com/linea-it/pz-lsst-inkind-doc/issues){:target="_blank"}. 
 
 *** 
 
-The Section 4 of the BRA-LIN proposal refers to the contributions related to Photometric Redshifts. It is organized in four subsections (click for more details):
+Section 4 of the BRA-LIN proposal refers to the contributions related to Photometric Redshifts. It is organized into four subsections (click for more details):
 
 * S4.1 - [PZ Training Set Maker](s4_1.md)
 * S4.2 - [PZ Server](s4_2.md) 
