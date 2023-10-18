@@ -50,7 +50,8 @@ BRA-LIN S4 Timeline revised on October 2023 based on LSST Timeline version publi
 - **Proposal lead:** Luiz Nicolaci da Costa
 - **Program manager:** Julia Gschwend
 - **Contribution lead of BRA-LIN-S4:** Julia Gschwend (contact: **julia at linea dot org dot br**)
-- **Software developers:** Cristiano Singulani, Glauber Costa Vila-Verde, Henrique Dante 
+- **Front-end developers:** Glauber Costa Vila-Verde, Jandson Vitorino 
+- **Back-end developers:** Cristiano Singulani, Henrique Dante, Julia Gschwend 
 - **System analyst:** Carlos Adean
 - **Undergrad student:** Heloisa Mengisztki
 
