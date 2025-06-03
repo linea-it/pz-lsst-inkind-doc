@@ -8,7 +8,7 @@
     <title>BRA-LIN-S4.4 - BRA-LIN-S4</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
@@ -17,12 +17,11 @@
         var mkdocs_page_url = null;
       </script>
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -34,7 +33,7 @@
           <a href=".." class="icon icon-home"> BRA-LIN-S4
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -57,7 +56,7 @@
                 </li>
               </ul>
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">BRA-LIN-S4.4</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">BRA-LIN-S4.4</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
     </li>
@@ -95,8 +94,8 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>BRA-LIN-S4.4</li>
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">BRA-LIN-S4.4</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -109,13 +108,18 @@
 <h3 id="introduction">Introduction</h3>
 <p>The Legacy Survey of Space and Time (LSST) will provide photometric measurements for billions of objects during its ten years of operations. Most foreseen LSST science cases rely on photometric redshifts (photo-z) estimates for these objects. </p>
 <p>The LSST Project's Data Management (DM) department plans to provide at least one, possibly more, photo-z estimates for each object as part of each data release. Given the large and diverse scope of science that can result from the LSST data, a unique photo-z method is expected not to satisfy all the requirements of the whole community. </p>
-<p>This contribution consists of offering photo-z tables as federated datasets for each data release, using a different photo-z method from the official estimates (to be defined by the DM team), thus expanding the scope of the science supported by the data releases. </p>
+<p>This contribution consists of offering photo-z tables as federated datasets for each data release, using a different photo-z method from the official estimates (also to be defined by the DM team), thus expanding the scope of the science supported by the data releases. </p>
 <p>The infrastructure required to produce, store, and deliver the photo-z tables will be provided by the Brazilian IDAC. The software development necessary to produce these tables, including the optimization and refactoring of the DES photo-z pipelines to run on the LSST scale and the production of new pipelines to cover all data flow steps, is accounted for as a directable software development effort. </p>
 <h3 id="software-development">Software development</h3>
 <p>The initial software development plan consisted of refactoring the pipeline Photo-z Compute from the DES Science Portal to ensure scalability in LSST. The new pipeline would keep only the concepts of data preparation, parallelization, easy access to metadata, and provenance control. The LSST scale imposes the adoption of a completely different technology from that used in the DES Portal.</p>
 <p>Preliminary tests using Parsl to handle the parallelization and using the photo-z code <a href="https://www.cfht.hawaii.edu/~arnouts/LEPHARE/lephare.html" target="_blank">LePHARE</a> were carried out in 2021-2022. In mid-2022, the development team started an investigation to evaluate the possibility of reusing <a href="https://github.com/LSSTDESC/RAIL" target="_blank">RAIL</a> (open source code, developed by DESC) infrastructure to support the production of photo-z tables. </p>
-<p>An initial set of scripts to automatize the preparation of input data and the execution of the RAIL estimate module at LIneA's HPC environment is available on the <a href="https://github.com/linea-it/pz-compute" target="_blank">PZ Compute's repository on GitHub</a>. It supports two photo-z algorithms: BPZ and FlexZBoost. LIneA team will contribute to RAIL development by implementing the wrapper of the photo-z algorithm recommended by DM if it still needs to be implemented at the time.</p>
-<p>Scalability tests using the initial version of the pipeline on <a href="https://dp0-2.lsst.io/" target="_blank">DP0.2 data</a> yielded the first runtime and storage benchmarks. A detailed report with test results is available in <a href="https://docs.google.com/document/d/1a1_vLTTuf866ZdcPIJTaKzLk8Ih1w11OfzIdp4DGuYg/preview" target="_blank">this document</a>. Some highlights are: </p>
+<p>An initial set of scripts to automatize the preparation of input data and the execution of the RAIL estimate module at LIneA's HPC environment is available on the <a href="https://github.com/linea-it/pz-compute" target="_blank">PZ Compute's repository on GitHub</a>. It started supporting two photo-z algorithms, BPZ and FlexZBoost, then was expanded to include GPz, TPZ, and LePHARE. <!--LIneA team will contribute to RAIL development by implementing the wrapper of the photo-z algorithm recommended by DM if it still needs to be implemented at the time.--> </p>
+<p>Scalability tests on <a href="https://dp0-2.lsst.io/" target="_blank">DP0.2 data</a> yielded the first runtime and storage benchmarks. Detailed reports with test results are available in these two documents: </p>
+<ul>
+<li><a href="https://drive.google.com/file/d/1DgR0i1nkVABjfRK1gkpyVMqH75oWi57l/view?usp=drive_link">report_pz_compute_henrique_dante_may_2023.pdf</a> </li>
+<li><a href="https://drive.google.com/file/d/16ceBOs2YZReR_gNAIDFnbVVV5c3Lp7Tj/view?usp=drive_link">report_pz_compute_henrique_dante_dec_2023.pdf</a></li>
+</ul>
+<p>In summary, the main results are: </p>
 <ul>
 <li>For 40 billion objects, around 267 thousand files are expected.</li>
 <li>Uncompressed output files with 301 points would take around 344 MiB.</li>
@@ -126,25 +130,29 @@
 <thead>
 <tr>
 <th align="left">Algorithm</th>
-<th align="center">Average time per object</th>
 <th align="center">Predicted Runtime for DR11</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">Pré-processing</td>
-<td align="center">0.03 ms/obj</td>
-<td align="center">00:23:52</td>
-</tr>
-<tr>
-<td align="left">BPZ</td>
-<td align="center">1.95 ms/obj</td>
-<td align="center">33:30:28</td>
+<td align="center">24 min</td>
 </tr>
 <tr>
 <td align="left">FlexZBost</td>
-<td align="center">2.70 ms/obj</td>
-<td align="center">24:10:45</td>
+<td align="center">7 hours</td>
+</tr>
+<tr>
+<td align="left">BPZ</td>
+<td align="center">9 hours</td>
+</tr>
+<tr>
+<td align="left">TPZ</td>
+<td align="center">9 hours</td>
+</tr>
+<tr>
+<td align="left">LePHARE</td>
+<td align="center">24 days</td>
 </tr>
 </tbody>
 </table>
@@ -162,20 +170,20 @@
 </ul>
 <h3 id="planning-for-operations">Planning for operations</h3>
 <p>The figure below shows a flowchart representing the data flow within the Brazilian IDAC infrastructure. The numbered arrows refer to the sequence of processes that involves moving data through the IDAC components. The roman numbers refer to processes involving data transformation. </p>
-<p><img alt="Sequence of steps for PZ Compute" src="../IDAC_dataflow.png" /></p>
+<p><img alt="Sequence of steps for PZ Compute" src="../IDAC_dataflow_3_jun_25.png" /></p>
 <p>The steps involved in the production of PZ tables are organized in four stages: </p>
 <h4 id="stage-i-data-acquisition">Stage I   - Data acquisition</h4>
 <ul>
 <li>Register new data release (DR) on the IDAC data management system (initial metadata). </li>
-<li>Start data transfer: download LSST Objects Catalog files from LSST Data Access Center (DAC) to LIneA's Data Transfer Node in DMZ. The following steps are done continuously as new chunks of data arrive. </li>
+<li>Start data transfer: download LSST Objects Catalog files from LSST Data Access Center (DAC) to LIneA's Data Transfer Node in DMZ.  </li>
 <li>Save Objects Catalog files on Lustre T1.</li>
-<li>Objects Catalog automatic validation of chunks of data - integrity and consistency checks, QA reports, and compare key numbers. Append QA info to DR metadata. </li>
-<li>Apply data cleaning to create a "skinny table" for input for photo-z pipelines (e.g., select columns, truncate extra decimal cases, etc). Save skinny table on Lustre T0. Append skinny table info to DR metadata.</li>
+<li>Objects Catalog validation - integrity and consistency checks, QA reports, and compare key numbers. Append QA info to DR metadata. </li>
+<li>Apply data cleaning to create a "skinny table" for input for photo-z pipelines (e.g., select columns, apply photometric corrections, round extra decimal cases, etc). Save skinny table on Lustre T0 (fast I/O). Append skinny table info to DR metadata.</li>
 <li>Download and store ancillary files (e.g., observing conditions maps, SED templates, documents, etc). Append ancillary file info to DR metadata.</li>
 </ul>
 <h4 id="stage-ii-photo-z-pre-processing">Stage II  - Photo-z pre-processing</h4>
 <ul>
-<li>Execution of pipeline Training Set Maker (or download whatever training set recommended by the LSST DM team).</li>
+<li>Execution of pipeline Training Set Maker (x-matching).</li>
 <li>Characterization of the training set - QA report (Jupyter Notebook).</li>
 <li>Register (and upload) training set(s) on the PZ Server.</li>
 <li>Photo-z Validation: execution of RAIL <code>inform</code>, <code>estimation</code>, and <code>evaluation</code> modules. Report with photo-z quality metrics (Jupyter Notebook).</li>
@@ -184,7 +192,7 @@
 </ul>
 <h4 id="stage-iii-photo-z-computing">Stage III - Photo-z computing</h4>
 <ul>
-<li>Execution of pipeline PZ Compute (based on RAIL estimation module, customized to run in parallel using the IDAC's * infrastructure) on the whole dataset. </li>
+<li>Execution of pipeline PZ Compute on the whole dataset. </li>
 <li>Validation of PZ Compute results - Report with metadata, priors, configuration parameters, global statistics, N(z) (global and tomographic bins) (Jupyter Notebook). </li>
 <li>Register (no upload, only metadata) the PZ table on the PZ Server. </li>
 </ul>
@@ -226,14 +234,15 @@
     
   </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
-        };
+        });
     </script>
 
 </body>
