@@ -31,7 +31,7 @@ Section 4 of the BRA-LIN proposal refers to the contributions related to Photome
 
 * [S4.1 and S4.2 - Training Set Maker and PZ](https://github.com/orgs/linea-it/projects/2/views/1){:target="_blank"}
 
-* S4.3 - PZ Validation Cooperative (start in 2024) 
+* S4.3 - PZ Validation Cooperative (start in 2026 with DP2) 
 
 * [S4.4 - PZ Compute](https://github.com/orgs/linea-it/projects/10/views/1){:target="_blank"}
 
@@ -63,5 +63,4 @@ BRA-LIN S4 Timeline revised on April 2025.
 
 
 
-Last updated: June 3, 2025
-
+Last updated: June 26, 2025
