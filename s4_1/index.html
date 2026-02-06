@@ -94,7 +94,7 @@
 <h4 id="introduction">Introduction</h4>
 <p>The Training Set Maker (TSM) is a cross-matching service tailored to create training sets to feed machine-learning-based photo-z algorithms at the catalog level. Although initially conceived as a separate service, the TSM was incorporated as a microservice under the <a href="https://linea-it.github.io/pz-lsst-inkind-doc/s4_2/">PZ Server</a> umbrella during early development. </p>
 <p>TSM was inspired by its namesake Training Set Maker pipeline, a Postgres-based service available on the DES Science Portal (<a href="https://www.sciencedirect.com/science/article/abs/pii/S2213133718300891?via%3Dihub" target="_blank">Gschwend et al., 2018</a>), but to scale for LSST datasets. It will rely on an entirely different infrastructure: the <a href="https://github.com/astronomy-commons/lsdb" target="_blank">LSDB</a> software, currently under development by the <a href="https://www.lsstcorporation.org/lincc/frameworks" target="_blank">LINCC</a> team.</p>
-<p>The service will be delivered as a Python library with useful functions to: </p>
+<p>The service is delivered as a Python library with useful functions to: </p>
 <ol>
 <li>
 <p>Access, manipulate, and visualize lightweight catalogs of reference redshifts (spec-z, simulated true-z, etc) locally in the user's environment (e.g., RSP notebook aspect, users' laptop, etc.). TSM will take advantage of the PZ Server's API <a href="https://github.com/linea-it/pzserver"><code>pzserver</code></a> (see API's documentation <a href="https://linea-it.github.io/pzserver/">here</a>) to access user-generated catalogs hosted by the server.</p>
@@ -104,17 +104,17 @@
 </li>
 </ol>
 <p>In both cases, RSP credentials are required for authentication and authorization purposes. </p>
-<p>TSM is not considered an efficient tool for manipulating big data in the user's work environment. Nonetheless, it will take advantage of the administrative functions of the PZ Server to retrieve data and metadata and use the Brazilian IDAC's infrastructure to deal with large datasets. </p>
+<p>TSM is not a tool for manipulating big data in the user's work environment. Nonetheless, it will take advantage of the administrative functions of the PZ Server to retrieve data and metadata and use the Brazilian IDAC's infrastructure to deal with large datasets remotely. </p>
 <h4 id="overview-of-planned-remote-service">Overview of planned remote service</h4>
 <p><img alt="Training Set creation cycle" src="../tsm_idac.png" />
-* The technology used to perform the cross-matching will be determined in agreement with the collaboration, following along the results of <a href="https://www.lsstcorporation.org/lincc/frameworks">LINCC Frameworks</a> task force on this subject. Current efforts point to the adoption of catalog files using a partitioning schema based on <a href="https://github.com/astronomy-commons/hipscat">HIPSCat</a> and the matching done in massive parallel processes orchestrated by <a href="https://github.com/astronomy-commons/lsdb">LSDB</a>, both under development. </p>
+* The technology used to perform the cross-matching will be determined in agreement with the collaboration, following along the results of <a href="https://www.lsstcorporation.org/lincc/frameworks">LINCC Frameworks</a> task force on this subject. Current efforts point to the adoption of catalog files using a partitioning schema based on <a href="https://github.com/astronomy-commons/hats">HATS</a> and the matching done in massive parallel processes orchestrated by <a href="https://github.com/astronomy-commons/lsdb">LSDB</a>, both under development. </p>
 <h4 id="forecasted-use-cases">Forecasted use cases</h4>
 <ol>
 <li>
 <p>The user retrieves specific reference redshift catalogs from the PZ Server or other online services such as <a href="https://astroquery.readthedocs.io/en/latest/">Astroquery</a> (<a href="https://ui.adsabs.harvard.edu/abs/2019AJ....157...98G/abstract">Ginsburg, Sipőcz, Brasseur, et al. 2019</a>). The PZ Server will provide a list of previous public spec-z catalogs of interest (previously informed by the community), for which metadata and quality flags conversion will already be available. </p>
 </li>
 <li>
-<p>The user combines different redshifts catalogs into a single table. TSM will provide a mechanism to perform spatial cross-matching among multiple tables to resolve multiple redshift measurements for the same galaxies (flexible criteria) and standardize quality flags from different surveys to create redshift compilations with data from different sources. </p>
+<p>The user combines different redshifts catalogs into a single table. TSM will provide a mechanism to perform spatial cross-matching among multiple tables to resolve multiple redshift measurements for the same galaxies (flexible criteria) and standardize quality flags from different surveys to create redshift compilations with data from different sources. <em>Update in 2026: This functionality evolved to a separate pipeline called Combine Redshift Catalogs (CRC) also available in the PZ Server site and API.</em> </p>
 </li>
 <li>
 <p>The user retrieves redshift compilations from the PZ Server. The PZ Server will host a standardized compilation of redshifts with public data available up to date on each LSST Data Release, vetted by LSST DM staff. These compilations must be easy to find (e.g., flagged as "latest") and contain detailed documentation to cite the original sources properly. </p>
