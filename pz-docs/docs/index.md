@@ -4,7 +4,7 @@ In-kind contribution program BRA-LIN-S4 - Photometric Redshifts.
 
 #### Introduction
 
-This page describes the in-kind contributions offered by the Laboratório Interinstitucional de e-Astronomia ([LIneA](http://www.linea.org.br){:target="_blank"}) to [Vera C. Rubin Observatory](https://rubinobservatory.org/){:target="_blank"}, approved as part of the in-kind contribution program BRA-LIN. This is a live document that started with the description of planned work. It is regularly updated to offer a high-level description of the software produced as the program evolves. Technical documentation of each piece of software should be delivered together with the code in the respective repositories. For comments or suggestions, please open an issue [here](https://github.com/linea-it/pz-lsst-inkind-doc/issues){:target="_blank"}. 
+This page describes the in-kind contributions offered by the Laboratório Interinstitucional de e-Astronomia ([LIneA](http://www.linea.org.br){:target="_blank"}) to the [Vera C. Rubin Observatory](https://rubinobservatory.org/){:target="_blank"}, approved as part of the in-kind contribution program BRA-LIN. This is a live document that started with the description of planned work. It is regularly updated to offer a high-level description of the software produced as the program evolves. Technical documentation of each piece of software should be delivered together with the code in the respective repositories. For comments or suggestions, please open an issue [here](https://github.com/linea-it/pz-lsst-inkind-doc/issues){:target="_blank"}. 
 
 *** 
 
@@ -16,34 +16,30 @@ Section 4 of the BRA-LIN proposal refers to the contributions related to Photome
 * S4.4 - [PZ Tables as Federated Datasets](s4_4.md) 
 
 
-#### Related documents
+#### Related documents and links
 
 * [BRA-LIN in-kind contribution proposal](https://docs.google.com/document/d/1JWUG2vxxPD1DwrbQsZwI1q_2lk2TIGnHGHNbaq2zAbk/preview){:target="_blank"}
 
 * [BRA-LIN S4 work plan approved by Rubin staff](https://drive.google.com/file/d/1SmMggDtbVOVogOboq6X-smjv6wbXus-3/preview){:target="_blank"}
 
-* [BRA-LIN S4 annual evaluation report FY2023](https://drive.google.com/file/d/109e2cG9QnI-xaRFkzLAc6v9wdfwCkFjN/preview){:target="_blank"}
+* [Project Management on GitHub](https://github.com/orgs/linea-it/projects/39/views/2?sliceBy%5Bvalue%5D=%F0%9F%8F%AA+PZ+Server)
 
-* BRA-LIN S4 annual evaluation report FY2024 (soon)
+* [Documentation for users](https://docs.linea.org.br/en/sci-platforms/pz_server.html)
 
+* [Datasets information page](https://data.linea.org.br/en/sci_products/pzserver.html)
 
-#### Project Management on GitHub
+* [LIneA website](http://www.linea.org.br){:target="_blank"}
 
-* [S4.1 and S4.2 - Training Set Maker and PZ](https://github.com/orgs/linea-it/projects/2/views/1){:target="_blank"}
-
-* S4.3 - PZ Validation Cooperative (start in 2026 with DP2) 
-
-* [S4.4 - PZ Compute](https://github.com/orgs/linea-it/projects/10/views/1){:target="_blank"}
+* [Rubin Observatory website](https://rubinobservatory.org/){:target="_blank"}
 
 
-
-#### Timeline 
+<!-- #### Timeline 
 
 
 
 ![BRA-LIN Timeline](BRA-LIN-S4_Timeline_v_Apr25.png)
 
-BRA-LIN S4 Timeline revised on April 2025. 
+BRA-LIN S4 Timeline revised on April 2025.  -->
 
 
 #### LIneA Key Personnel
@@ -63,4 +59,4 @@ BRA-LIN S4 Timeline revised on April 2025.
 
 
 
-Last updated: June 26, 2025
+Revised: February 6, 2026
